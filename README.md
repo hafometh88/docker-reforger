@@ -69,9 +69,11 @@ Path to a JSON file that contains array of mod objects.
 ```
 ### RCON
 
-RCON can be activated by defining the `RCON_PASSWORD` variable.
+RCON can be activated by defining all three required environment variables: `RCON_ADDRESS`, `RCON_PORT`, and `RCON_PASSWORD`.
 
 ```sh
+-e RCON_ADDRESS="0.0.0.0" \
+-e RCON_PORT="19999" \
 -e RCON_PASSWORD="ExamplePassword123"
 ```
 
@@ -79,5 +81,7 @@ The password:
 * is required for RCON to start
 * does not support spaces
 * must be at least 3 characters long
+
+If any of the three RCON environment variables are missing or empty, RCON will be completely disabled.
 
 Use `-e RCON_PERMISSION=""` to change [permission](https://community.bistudio.com/wiki/Arma_Reforger:Server_Config#permission) for all RCON clients.
