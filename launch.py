@@ -143,7 +143,8 @@ else:
             "permission": os.environ["RCON_PERMISSION"],
         }
     else:
-        config["rcon"] = None
+        if "rcon" in config:
+            del config["rcon"]
 
     if env_defined("GAME_NAME"):
         config["game"]["name"] = os.environ["GAME_NAME"]
