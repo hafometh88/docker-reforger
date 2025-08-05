@@ -9,6 +9,7 @@ services:
       - "17777:17777/udp"
       - "19999:19999/udp"  # RCON
     volumes:
+      - ./reforger/game:/reforger
       - ./reforger/configs:/reforger/Configs
       - ./reforger/profile:/home/profile
       - ./reforger/workshop:/reforger/workshop
