@@ -2,9 +2,9 @@
 name: Publish Docker
 
 on:
-  #push:
-   # branches:
-    #  - forked
+  push:
+    branches:
+      - forked
   workflow_dispatch:
 
 env:
